@@ -14,7 +14,7 @@ function setup() {
    var X = 133 +(i*133);
    line(X, 0, X, 400);
    for(var j = 0; j < 0; j++){
-     var Y = 134+(j*133);
+     var Y = 133+(j*133);
    }
  }
 
