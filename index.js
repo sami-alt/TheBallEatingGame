@@ -30,11 +30,11 @@ function setup() {
     if(k % 2) {
       fill(255,0,0);
       textSize(100);
-      text("0", mouseX - 35, mouseY + 35 );
+      text("X", mouseX - 35, mouseY + 35 );
     } else {
       fill(0,0,0);
       textSize(100);
-      text("X", mouseX - 35, mouseY + 35);
+      text("0", mouseX - 35, mouseY + 35);
     }
     k += 1;
   }
