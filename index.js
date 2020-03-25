@@ -1,46 +1,32 @@
 /// <reference path="./node_modules/@types/p5/global.d.ts" />
 function setup() {
+  'use strict';
 
 
   angleMode(DEGREES);
-  createCanvas(400, 400); // Size must be the first statement
+  createCanvas(500, 500); // Size must be the first statement
   stroke(255); // Set line drawing color to white
   frameRate(30);
 
   background(255, 255, 255);
  
  
- 
 
- stroke(0);
+    var BallXpos = []
+    for ( var i = 0; i < 9; i++){
+        BallXpos.push(i * 70);
+     };
 
- for (var i = 0; i < 2 ; i++){
-   var X = 133 +(i*133);
-   line(X, 0, X, 400);
-   for(var j = 0; j < 2; j++){
-     var Y = 133+(j*133);
-     line(0,Y , 400, Y);
-   }
- }
 
- var k = 0;
- 
-  mouseClicked = function() {
-    
-    if(k % 2) {
-      fill(255,0,0);
-      textSize(100);
-      text("X", mouseX - 35, mouseY + 35 );
-    } else {
-      fill(0,0,0);
-      textSize(100);
-      text("0", mouseX - 35, mouseY + 35);
+    window.draw = function() {
+        background(255,255,255);
+        for ( var i = 0; i < BallXpos.length; i++){
+            fill(255,0,0);
+            ellipse(BallXpos[i], 250, 50, 50);
+            BallXpos[i] -=1;
+            if (BallXpos[i] < -60){
+                BallXpos[i] = width + 60;
+            }
+        }  
     }
-    k += 1;
-  }
-
-
-
-
-
 }
