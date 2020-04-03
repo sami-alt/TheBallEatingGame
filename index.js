@@ -59,7 +59,7 @@ function setup() {
     }
     //Lista
     var LittleBalls = [];
-    for (var i = 0; i < 5; i++) {
+    for (var i = 0; i < 25; i++) {
         LittleBalls.push(new LittleBall(i * 150 + 525, random(50, 450)));
 
     }
@@ -124,11 +124,11 @@ function setup() {
     var drawScene3 = function(){
         currentScene = 3;
         
-        if (PlayerScore === 5) {
+        if (PlayerScore ===25) {
             background(255,255,0);
             textSize(50);
             text("YOUR WINER", 80, 250);
-        } if (PlayerScore < 5){
+        } if (PlayerScore < 25){
             background(255,0,102);
             textSize(50);
             text("YOUR LOOSER", 80, 250);
